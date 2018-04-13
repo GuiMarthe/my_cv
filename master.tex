@@ -1,0 +1,224 @@
+
+% TODO: 
+% new set up the extra info area
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage[margin=0.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{hyperref}
+\usepackage{MnSymbol}
+\usepackage{longtable}
+\usepackage{xpatch}
+\usepackage{graphicx}
+\usepackage{multicol}
+% \setlength{\columnsep}{1.5cm}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Sharelatex Example},
+    bookmarks=true,
+    pdfpagemode=FullScreen,
+}
+\titlespacing*{\subsubsection}{0pt}{0.60em}{0.40em}
+\titlespacing*{\subsection}{0pt}{0pt}{.1em}
+\titlespacing*{\section}{0pt}{0.40em}{0.70em}
+
+\titleformat{\section}
+{\huge\bfseries\Large}
+{}
+{0em}
+{}[\titlerule]
+
+\titleformat{\subsection}
+{\bfseries\large}
+{}
+{0em}
+{}
+
+\author{Guilherme C. Q. Marthe}
+\title{Currículo}
+
+% \renewcommand{\maketitle}{
+% 	\vspace{-0.05em} 
+% 	\hspace{-0.8cm}
+% 	\begin{minipage}[t]{1cm}
+% 		\raggedright
+% 		\includegraphics[width=1cm]{square.png}
+% 	\end{minipage}
+% 	\hfill
+% 	\begin{minipage}[t]{1\textwidth}
+% 		\raggedright
+% 		{\huge\theauthor}
+% 		\vspace{0.2em}\\
+% 		Av. Barão de Monte Mor, 225 apt 32 - São Paulo, SP 05687-010\\
+% 		RG: 53599469 --- CPF: 41018776885\\
+% 		T (11) 3755-0719 --- C (11) 99161-7553\\
+% 		GitHub: /GuiMarthe\\
+% 		\href{mailto:gui.marthe@gmail.com}{gui.marthe@gmail.com}
+% 	\end{minipage}
+% }
+\renewcommand{\maketitle}{
+\begin{flushleft}
+	{\huge\theauthor}
+	\vspace{0.2em}\\
+	Av. Barão de Monte Mor, 225 apt 32 - São Paulo, SP 05687-010\\
+	T (11) 3755-0719 --- C (11) 99161-7553\\
+	GitHub: GuiMarthe | \href{mailto:gui.marthe@gmail.com}{gui.marthe@gmail.com}
+\end{flushleft}
+}
+
+\newcommand{\jobdate}[3]{
+\large
+\vspace{0.05em} 
+  {#1, #2 --- #3}
+\vspace{0.5em} 
+\\
+}
+
+\xpatchcmd{\itemize}
+  {\def\makelabel}
+  {\setlength{\itemsep}{0.2em}\def\makelabel}
+  {}
+  {}
+\renewcommand\labelitemi{$\cdot$}
+
+\begin{document}
+
+\maketitle
+
+\section{Perfil Profissional}
+
+ \linespread{.99}\large{Economista formado pela PUC-SP com uma graduação em Estatística no Instituto de Matemática e Estatística da USP em andamento. Possui uma curiosidade natural em usar dados e modelagem para resolver problemas e estruturar projetos, bem como a paixão em expor as conclusões de suas soluções. Possui seis anos de experiência com programação estatística, em R e durante os últimos três anos tornou-se confiante no uso das bibliotecas pertinentes em Python. Atualmente têm se aventurado com o uso de técnicas Bayesianas em análises de dados, devido à versatilidade e alto nível de interpretação, sendo potencialmente melhor que as técnicas convencionais de análise. Em Agosto de 2017, teve a oportunidade de se apresentar no PyData São Paulo e em Novembro no evento de 10 anos do Groupy-SP. É membro ativo em comunidades de Deep Learning e programação científica.}
+
+\vspace{0.1em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experiências e Principais Realizações}
+
+\subsection{Analista de dados, Umoe Bioenergy}
+\jobdate{São Paulo e Presidente Prudente}{abril 2017}{Atualmente}
+Responsável pela gestão analítica dos dados da cadeia produtiva da companhia, reportando diretamente ao Diretor Financeiro e Presidente. Foco em identificar padrões e oportunidades de melhoria contínua através da análise de dados de várias etapas de produção agrícola como plantio, colheita, tratos culturais, manutenção de equipamentos, performance dos colaboradores, etc. Apresentação e discussão de análises e relatórios com gestores das áreas.
+
+\subsubsection{Principais Realizações}
+
+\begin{itemize}
+
+\item{Criação de workflows e pipelines de manipulação de dados para automatizar relatórios de KPI’s em eficiência de maquinário e pessoal;}
+\item{Por meio de mineração de dados, identificou operadores de maquinário underperformers encaminhando-os ao departamento pessoal que ficou responsável pelas remediações;}
+\item{Utilizando-se de modelagem Bayesiana, identificou e quantificou gargalos na colheita mecanizada, auxiliando na tomada de decisão em investimentos de grande porte da usina;}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Analista de produto, enjoei.com.br}
+\jobdate{São Paulo, SP}{março 2016}{março 2017}
+Parte da equipe que conceitualiza, específica e prioriza os projetos de novas funcionalidades e otimização da pla- taforma do Enjoei - um market-place concentrado na compra e venda de roupas usadas. Foi responsável direto por atender demandas de análises rigorosas utilizando aos dados estruturados e semi estruturados da equipe de produto, marketing e atendimento focando na tomada de decisão impulsionada por dados.
+\subsubsection{Principais Realizações}
+
+\begin{itemize}
+
+\item{Implementar e otimizar o algoritmo base de ordenação dos produtos no site, com base em uma estimação de sellability de produtos em tempo real;}
+\item{Implementar o primeiro modelo estatístico de recomendação de conglomerados de produtos baseado em vizinhanças, junto com o pipeline de previsão necessário para o seu uso;}
+\item{Análise de padrões de pagamentos em boletos focado na redução da volatilidade desta variável;}
+\item{Análise rigorosa de fatores importantes de receita e lucratividade de ações diretas no site, buscando o entendimento otimização no uso desses fatores;}
+\item{Implementação da infraestrutura de dados necessárias para uma análise de tickets de atendimento do site;}
+\item{Modelagem de receita prevista para diversos projetos com o intuito de estudar a viabilidade e a priorização deles;}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Economista Jr. em pesquisa e análise econômica, GO Associados}
+\jobdate{São Paulo, Sp}{novembro de 2012}{fevereiro de 2014}
+Trabalho direto com os sócios em reuniões com clientes e na elaboração de projetos, como pareceres, modelagens econômico-financeiras, notas técnicas, estudos econômicos, workshops, apresentações de conjuntura. Destaque para as áreas de defesa da concorrência, infraestrutura, regulação, energia, saneamento, entre outras. Acompanhamento da conjuntura macroeconômica em escala global, nacional, setorial e regulatória.
+\subsubsection{Principais Realizações}
+
+\begin{itemize}
+
+\item{Auxílio na elaboração de estudo concorrencial do setor aeroportuário a luz das concessões dos aeroportos de Confins e Galeão no segundo semestre de 2013;}
+\item{Elaboração de Workshop de melhores práticas concorrenciais à associações de classe;}
+\item{Presença direta na divulgação de Manual para Elaboração de contratos de desempenho de eficiência operacional em empresas de saneamento elaborado pela GO para o IFC, braço do Banco Mundial;}
+\item{Pesquisas e criação de conteúdo para a segunda edição do livro texto Direito e Economia da Concorrência de Gesner Oliveira e João Rodas;}
+\item{Criação de conteúdo e gerenciamento da publicação do livro Parcerias Público Privadas de Gesner Oliveira e Luis Chrysostomo;}
+\item{Secretário executivo do Grupo de Economia da Infraestrutura e Soluções Ambientais, participando da elaboração e curadoria das reuniões;}
+
+\end{itemize}
+\section{Informações Adicionais}
+\xpatchcmd{\itemize}
+  {\def\makelabel}
+  {\setlength{\itemsep}{0em}\def\makelabel}
+  {}
+  {}
+
+
+\setlength\multicolsep{0pt}
+
+\begin{multicols}{2}
+\normalsize
+
+\subsection{Educação}
+\begin{itemize}
+\item{IME-USP – Grad. Estatística, em andamento} 
+\item{Especialização em Data Science – JHU, interrompida} 
+\item{Pontifícia Universidade Católica de São Paulo, Economia, 2014}
+\item{Mount Vernon High School, Fairfax County VA, 2007/2008 (full year)}
+\item{Expanish - Spanish School Buenos Aires}
+\end{itemize}
+
+
+\subsection{Conhecimentos técnicos}
+\begin{itemize}
+\item{Pacotes Estatísticos: R confortável; Python científico confortável; Spark básico} 
+\item{Econometria de Séries Temporais (VAR, ARCH, ARIMA)} 
+\item{Modelagem estatística aplicada: OLS, LMM, GLM, ANOVA, testes de hipóteses, bootstraping}
+\item{Técnicas de ML: SVM, RF, LDA, KNN, KMC, PCA, t-SNE, e outras}
+\item{Utilitários: SQL, Airflow, Jupyter, Docker, GCloud, git}
+\end{itemize}
+
+
+\subsection{Educação Complementar}
+\begin{itemize}
+\item{Machine Learning for Data Science and Analytics – ColumbiaX – Jan 2016} 
+\item{Curso preparatório para ANPEC – Insper 2014 e 2015} 
+\item{Simpósio de economia e Econometria dos preços das commodities, FGV EPGE - agosto 2012} 
+\item{Operador de Mercado Financeiro Banker, Saint Paul, março a junho de 2011}
+\end{itemize}
+
+\columnbreak
+
+\subsection{Publicações e apresentações em congressos}
+\begin{itemize}
+\item{Oliveira, Gesner; Heibel, Wagner; Marthe, Guilherme. Qualidade dos Serviços e Fatores da Independência das Agências Reguladoras: Uma Primeira Análise do Setor de Saneamento, Congresso ABAR, 2013} 
+\item{Grupo de Economia da Infraestrutura e Soluções Ambientais. Como aumentar a concorrência e o investimento nos aeroportos, maio 2013.}
+\end{itemize} 
+
+
+\subsection{Hobbies e interesses}
+\begin{itemize}
+\item{Palestras, ler, mágicas, tecnologia, programação.} 
+\item{Professor de Matemática em curso Supletivo, Colégio Pio XII, São Paulo, SP 2009} 
+\item{Cofundador e escritor do Blog cultural Café Música e Filosofia: http://cafemusicaefilosofia.blogspot.com.br/ São Paulo, SP, 2009 – 2013}
+\end{itemize}
+
+
+\subsection{Referências}
+\begin{itemize}
+\item{enjoei.com.br: Marcos Takashi, Gerente de BI\\T: (11) 98156-7295} 
+\item{GO Associados: Sr. Gesner Oliveira, Sócio Fundador\\gesner@goassociados.com.br C: (11) 98685-2715} 
+\item{PUC–SP: Sr. Flávio Saraiva, Professor Titular\\fmsaraiva@uol.com.br}
+\end{itemize}
+
+\end{multicols}
+
+
+
+
+\end{document}
+

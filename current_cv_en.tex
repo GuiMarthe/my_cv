@@ -26,7 +26,7 @@
     bookmarks=true,
     pdfpagemode=FullScreen,
 }
-\titlespacing*{\subsubsection}{0pt}{0.60em}{0.40em}
+\titlespacing*{\subsubsection}{0pt}{1em}{0.40em}
 \titlespacing*{\subsection}{0pt}{0pt}{.1em}
 \titlespacing*{\section}{0pt}{0.40em}{0.70em}
 
@@ -42,6 +42,12 @@
 {0em}
 {}
 
+\titleformat{\subsubsection}
+{\bfseries}
+{}
+{0em}
+{}
+
 \author{Guilherme C. Q. Marthe}
 \title{Currículo}
 
@@ -50,7 +56,7 @@
 	{\huge\theauthor}
 	\vspace{0.2em}\\
 	Av. Barão de Monte Mor, 225 apt 32 - São Paulo, SP 05687-010\\
-	T (11) 3755-0719 --- C (11) 99161-7553\\
+	C +55 11 99161-7553\\
 	GitHub: GuiMarthe | \href{mailto:gui.marthe@gmail.com}{gui.marthe@gmail.com}
 \end{flushleft}
 }
@@ -76,10 +82,8 @@
 
 \section{Professional Profile}
 
- \linespread{.99}\large{Economist graduated from PUC-SP with an in progress Bachelors Degree in Statistics from the Mathematics and Statistics Institute of USP. Posses a natural curiosity in using data and modeling to solve problems and structuring projects as well as a passion for exposing the conclusion of his solutions. Lately he has gained knowledge of using Bayesian data analysis techniques due to its versatility over traditional techniques. In August 2017 he presented a talk during the São Paulo Pydata conference and in November another during the 10 year anniversary of the Grupy-Sp. He is also an active member of deep learning and scientific programming communities.}
+ \linespread{.99}\large{Economist graduated from PUC-SP with an in progress Bachelors Degree in Statistics from the Mathematics and Statistics Institute of USP. Posses a natural curiosity in using data and modeling to solve problems and structuring projects as well as a passion for exposing the conclusion of his solutions. Has 6 years of experience with statistical programming in R and 4 years building data products with Python.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Experience and Achievements}
 
 \subsection{Data Scientist, Rappi}
 \jobdate{São Paulo}{August 2020}{current}
@@ -92,20 +96,22 @@ Guilherme's role at Rappi is aiding the Courier's Earnings and Incentives team i
 
 \item{<++>}
 
-\subsection{Data Scientist, Noverde}
-\jobdate{São Paulo}{April 2018}{August 2020}
+\section{Experience and Achievements}
 
-At Noverde, a consumer credit fintech startup founded in 2016, worked closely to the companies leadership team, conducting the data team focused on automated decision systems. Responsible for the conception, analysis, strategical decision making and implementation of the credit scoring online model that granted \$10m(USD) through 25 thousand contracts. Internally also focus his efforts towards task automation, BI data pipelines construction and small internal workshops for diffusing the tools and technologies he utilizes.
+\subsection{Data Scientist, Noverde}
+\jobdate{São Paulo}{April 2018}{currently}
+At Noverde, a consumer credit fintech startup founded in 2016, works closely with the company's leadership team, conducting the data team focused on automated decision systems. Responsible for the conception, analysis, strategical decision making and implementation of the credit scoring online model that granted \$10m(USD) through 25 thousand contracts. Internally also focus his efforts towards task automation, BI data pipelines construction and small internal workshops for diffusing the tools and technologies he utilizes.
 
 \subsubsection{Main Achievements}
 
 \begin{itemize}
 
-\item{With the successive implementation of the credit scoring model, he was able to bring the default rates from 48\% in march 2018 to 21\% in march 2020;}
-\item{Coordinated the construction of a customized credit scoring model with the Serasa-Experian data team;}
-\item{Built a behavioral scoring system for recurring costumers, a key part of Noverde's portfolio strategy;}
-\item{Built a low cost scoring model based on android sdk extracted data that aimed at screening high risk requests based on mobile usage snapshots;}
-\item{Focused on costumer experience and fraud prevention, built a prototype for a proof of life system automated system at a low operational cost;}
+\item{With the successive implementation of the credit scoring model, he was able to bring the default rates from 42\% in march 2018 to 22\% in december 2018;}
+\item{Coordinated the construction of a customized credit scoring model with the Serasa-Experian data team}
+\item{Built a prototype for requesters document processing that brought the cost of each api request from 4 reais to 20 cents;}
+\item{Focused on costumer experience and fraud prevention, build a prototype for a proof of life system automated system at a low operational cost;}
+\item{Automated the model tracking system in order to follow input population flow in order to early detect population shifts;}
+\end{itemize}
 
 \subsection{Data Analyst, Umoe Bioenergy}
 \jobdate{São Paulo e Presidente Prudente}{March 2017}{April 2018}
@@ -123,6 +129,7 @@ Responsible for the analytic data management of the companies productive chain, 
 
 \end{itemize}
 
+\pagebreak
 %%%%%%%%%%%%%%%%%%%%%%
 \subsection{Product Analyst, enjoei.com.br}
 \jobdate{São Paulo, SP}{March 2016}{March 2017}
@@ -138,24 +145,7 @@ Part of the team that conceptualized, specified and prioritized projects of new 
 \item{Viability study and prioritization of many projects through revenue modelling;}
 
 \end{itemize}
-\pagebreak
 %%%%%%%%%%%%%%%%%%%%%%
-\subsection{Trainee in Research and Economic Analysis, GO Associados}
-\jobdate{São Paulo, Sp}{November 2012}{February 2014}
-Direct work with partners in meetings with clients and preparation of projects, such as reports, financial and economic modeling, technical notes, economic studies, workshops, presentations. Especially in the field of anti-trust, infrastructure, regulation, energy, sanitation, among other relevant fields.  Monitoring of macroeconomic developments in global, national, sectoral and
-regulatory levels.
-\subsubsection{Main Achievement}
-
-\begin{itemize}
-
-\item{Assistance in the development of a competitive study of the airport sector in light of the concessions of the airports of Confins and Galeão in the second half of 2013;}
-\item{Development of a workshop about the best competitive practices for trade associations;}
-\item{Direct presence in writing and publishing of the “Manual to the Elaboration of operational performance contracting at sanitation companies” elaborated by GO to the International Finance Corporation, the private sector arm of the World Bank;}
-\item{Research and creating content for the second edition of the book Direito e Economia da Concorrência by Gesner Oliveira and João Rodas;}
-\item{Content creation and publication management of the book Parcerias Público Privadas by Gesner Oliveira and Luis Chrysostomo;}
-\item{Executive Secretary of the Economic Team of Infrastructure and Environmental Solutions, participating in the development and curatorship of meetings;}
-
-\end{itemize}
 \section{Additional Information}
 \xpatchcmd{\itemize}
   {\def\makelabel}
@@ -204,18 +194,11 @@ regulatory levels.
 \item{Economics Group of Infrastructure \& Environmental Solutions. Como aumentar a concorrência e o investimento nos aeroportos, May 2013.}
 \end{itemize} 
 
-\subsection{Hobbies and General Interests}
-\begin{itemize}
-\item{Lectures, reading clubs, card magic, technology, programming} 
-\item{Mathematics Teacher at Supletivo preparatory course Colégio Pio XII, São Paulo, SP — July to November - 2009} 
-\item{Co-founder and writer at Blog cultural Café Música e Filosofia: http://cafemusicaefilosofia.blogspot.com.br/São Paulo, SP, 2009-2013}
-\end{itemize}
-
 \subsection{References}
 \begin{itemize}
-\item{enjoei.com.br: Marcos Takashi, Gerente de BI\\T: (11) 98156-7295} 
-\item{GO Associados: Sr. Gesner Oliveira, Sócio Fundador\\gesner@goassociados.com.br C: (11) 98685-2715} 
-\item{PUC–SP: Sr. Flávio Saraiva, Professor Titular\\fmsaraiva@uol.com.br}
+\item{Rakuten: Marcos Takashi, Data Engineer and Data Scientist \\C: +81 90-3684-4901} 
+\item{GO Associados: Sr. Gesner Oliveira, Founding Partner\\gesner@goassociados.com.br C: (11) 98685-2715} 
+\item{99Taxi: Leonardo Bianconi, Product Strategy \\C: (11) 98372-8107}
 \end{itemize}
 
 \end{multicols}

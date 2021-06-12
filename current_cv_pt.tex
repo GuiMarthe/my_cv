@@ -1,5 +1,3 @@
-% TODO: 
-% new set up the extra info area
 
 \documentclass{article}
 
@@ -27,9 +25,9 @@
     pdfpagemode=FullScreen,
 }
 
-\titlespacing*{\subsubsection}{0pt}{0.60em}{0.40em}
+\titlespacing*{\section}{0pt}{1.3em}{0.70em}
 \titlespacing*{\subsection}{0pt}{0pt}{.1em}
-\titlespacing*{\section}{0pt}{0.40em}{0.70em}
+\titlespacing*{\subsubsection}{0pt}{0.60em}{0.40em}
 
 \titleformat{\section}
 {\huge\bfseries\Large}
@@ -52,25 +50,6 @@
 \author{Guilherme C. Q. Marthe}
 \title{Currículo}
 
-% \renewcommand{\maketitle}{
-% 	\vspace{-0.05em} 
-% 	\hspace{-0.8cm}
-% 	\begin{minipage}[t]{1cm}
-% 		\raggedright
-% 		\includegraphics[width=1cm]{square.png}
-% 	\end{minipage}
-% 	\hfill
-% 	\begin{minipage}[t]{1\textwidth}
-% 		\raggedright
-% 		{\huge\theauthor}
-% 		\vspace{0.2em}\\
-% 		Av. Barão de Monte Mor, 225 apt 32 - São Paulo, SP 05687-010\\
-% 		RG: 53599469 --- CPF: 41018776885\\
-% 		T (11) 3755-0719 --- C (11) 99161-7553\\
-% 		GitHub: /GuiMarthe\\
-% 		\href{mailto:gui.marthe@gmail.com}{gui.marthe@gmail.com}
-% 	\end{minipage}
-% }
 \renewcommand{\maketitle}{
 \begin{flushleft}
 	{\huge\theauthor}
@@ -111,7 +90,7 @@
 
 \subsection{Cientista de Dados, Noverde}
 \jobdate{São Paulo}{abril 2018}{Atualmente}
-Na Noverde, uma fintech de crédito pessoal iniciada em 2016, trabalha conjuntamente com as lideranças da empresa a conduzindo área de dados para decisões automatizadas. É responsável pela concepção, análise, acompanhamento, decisões estratégicas e implementação do modelo de credit scoring que concedeu mais de 40 milhões de reais em 25 mil contratos. Internamente também canalisa esforços para automatização de tarefas, construções de pipelines de BI e realiza workshops internos para difusão de ferramentas e tecnologias que utiliza.
+Na Noverde, uma fintech de crédito pessoal iniciada em 2016, trabalha conjuntamente com as lideranças da empresa a conduzindo área de dados para decisões automatizadas. É responsável pela concepção, análise, acompanhamento, decisões estratégicas e implementação do modelo de credit scoring que concedeu mais de 40 milhões de reais em 25 mil contratos. Internamente também canaliza esforços para automatização de tarefas, construções de pipelines de BI e realiza workshops internos para difusão de ferramentas e tecnologias que utiliza.
 
 \subsubsection{Principais Realizações}
 
@@ -127,7 +106,7 @@ Na Noverde, uma fintech de crédito pessoal iniciada em 2016, trabalha conjuntam
 
 
 \subsection{Analista de dados, Umoe Bioenergy}
-\jobdate{São Paulo e Presidente Prudente}{abril 2017}{Atualmente}
+\jobdate{São Paulo e Presidente Prudente}{março 2017}{abril 2018}
 Responsável pela gestão analítica dos dados da cadeia produtiva da companhia, reportando diretamente ao Diretor Financeiro e Presidente. Foco em identificar padrões e oportunidades de melhoria contínua através da análise de dados de várias etapas de produção agrícola como plantio, colheita, tratos culturais, manutenção de equipamentos, performance dos colaboradores, etc. Apresentação e discussão de análises e relatórios com gestores das áreas.
 
 \subsubsection{Principais Realizações}
@@ -141,6 +120,7 @@ Responsável pela gestão analítica dos dados da cadeia produtiva da companhia,
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
 \subsection{Analista de produto, enjoei.com.br}
 \jobdate{São Paulo, SP}{março 2016}{março 2017}
 Parte da equipe que conceitualiza, específica e prioriza os projetos de novas funcionalidades e otimização da plataforma do Enjoei - um market-place concentrado na compra e venda de roupas usadas. Foi responsável direto por atender demandas de análises rigorosas utilizando aos dados estruturados e semi estruturados da equipe de produto, marketing e atendimento focando na tomada de decisão impulsionada por dados.
@@ -158,21 +138,6 @@ Parte da equipe que conceitualiza, específica e prioriza os projetos de novas f
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%
-\subsection{Economista Jr. em pesquisa e análise econômica, GO Associados}
-\jobdate{São Paulo, Sp}{novembro de 2012}{fevereiro de 2014}
-Trabalho direto com os sócios em reuniões com clientes e na elaboração de projetos, como pareceres, modelagens econômico-financeiras, notas técnicas, estudos econômicos, workshops, apresentações de conjuntura. Destaque para as áreas de defesa da concorrência, infraestrutura, regulação, energia, saneamento, entre outras. Acompanhamento da conjuntura macroeconômica em escala global, nacional, setorial e regulatória.
-\subsubsection{Principais Realizações}
-
-\begin{itemize}
-
-\item{Auxílio na elaboração de estudo concorrencial do setor aeroportuário a luz das concessões dos aeroportos de Confins e Galeão no segundo semestre de 2013;}
-\item{Elaboração de Workshop de melhores práticas concorrenciais à associações de classe;}
-\item{Presença direta na divulgação de Manual para Elaboração de contratos de desempenho de eficiência operacional em empresas de saneamento elaborado pela GO para o IFC, braço do Banco Mundial;}
-\item{Pesquisas e criação de conteúdo para a segunda edição do livro texto Direito e Economia da Concorrência de Gesner Oliveira e João Rodas;}
-\item{Criação de conteúdo e gerenciamento da publicação do livro Parcerias Público Privadas de Gesner Oliveira e Luis Chrysostomo;}
-\item{Secretário executivo do Grupo de Economia da Infraestrutura e Soluções Ambientais, participando da elaboração e curadoria das reuniões;}
-
-\end{itemize}
 \section{Informações Adicionais}
 \xpatchcmd{\itemize}
   {\def\makelabel}
@@ -223,19 +188,11 @@ Trabalho direto com os sócios em reuniões com clientes e na elaboração de pr
 \end{itemize} 
 
 
-\subsection{Hobbies e interesses}
-\begin{itemize}
-\item{Palestras, ler, mágicas, tecnologia, programação.} 
-\item{Professor de Matemática em curso Supletivo, Colégio Pio XII, São Paulo, SP 2009} 
-\item{Cofundador e escritor do Blog cultural Café Música e Filosofia: http://cafemusicaefilosofia.blogspot.com.br/ São Paulo, SP, 2009 – 2013}
-\end{itemize}
-
-
 \subsection{Referências}
 \begin{itemize}
-\item{enjoei.com.br: Marcos Takashi, Gerente de BI\\T: (11) 98156-7295} 
+\item{Rakuten: Marcos Takashi, Engenheiro e Cientista de Dados \\C: +81 90-3684-4901} 
 \item{GO Associados: Sr. Gesner Oliveira, Sócio Fundador\\gesner@goassociados.com.br C: (11) 98685-2715} 
-\item{PUC–SP: Sr. Flávio Saraiva, Professor Titular\\fmsaraiva@uol.com.br}
+\item{99Taxi: Leonardo Bianconi, Estratégia de Produto\\ C: (11) 98372-8107}
 \end{itemize}
 
 \end{multicols}

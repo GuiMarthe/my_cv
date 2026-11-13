@@ -1,0 +1,260 @@
+% CV tailored for the FGV CERI bolsista-pesquisador(a) call (Applied Behavioral Sciences), Oct 2026
+% Based on current_cv_en.tex -- same layout, content re-weighted toward research,
+% experimental methods, impact evaluation and regulation/infrastructure.
+
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[margin=0.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{hyperref}
+\IfFileExists{MnSymbol.sty}{\usepackage{MnSymbol}}{}
+\usepackage{longtable}
+\usepackage{xpatch}
+\usepackage{graphicx}
+\usepackage{multicol}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Guilherme C. Q. Marthe - CV},
+    pdfauthor={Guilherme C. Q. Marthe},
+    bookmarks=true,
+}
+\titlespacing*{\subsubsection}{0pt}{1em}{0.40em}
+\titlespacing*{\subsection}{0pt}{0pt}{.1em}
+\titlespacing*{\section}{0pt}{0.40em}{0.70em}
+
+\titleformat{\section}
+{\huge\bfseries\Large}
+{}
+{0em}
+{}[\titlerule]
+
+\titleformat{\subsection}
+{\bfseries\large}
+{}
+{0em}
+{}
+
+\titleformat{\subsubsection}
+{\bfseries}
+{}
+{0em}
+{}
+
+\author{Guilherme C. Q. Marthe}
+\title{Resume}
+
+\renewcommand{\maketitle}{
+\begin{flushleft}
+	{\huge\theauthor}
+	\vspace{0.2em}\\
+	C +55 11 99161-7553\\
+	GitHub: GuiMarthe | \href{mailto:gui.marthe@gmail.com}{gui.marthe@gmail.com} | \href{https://www.linkedin.com/in/gui42/}{LinkedIn}
+\end{flushleft}
+}
+
+\newcommand{\jobdate}[3]{
+\large
+\vspace{0.05em}
+  {#1, #2 --- #3}
+\vspace{0.5em}
+\\
+}
+
+\xpatchcmd{\itemize}
+  {\def\makelabel}
+  {\setlength{\itemsep}{0.1em}\def\makelabel}
+  {}
+  {}
+\renewcommand\labelitemi{$\cdot$}
+
+\begin{document}
+
+\maketitle
+
+\section{Professional Profile}
+
+ \linespread{.99}\large{
+Data scientist and applied researcher trained in economics (PUC-SP) and statistics (IME-USP), with over ten years of experience applying causal inference and experimental design to real-world decisions. Completing an M.Sc. in Mathematical Statistics and Probability at IME-USP, with a paper on diagnostics for synthetic controls accepted at the 48th Meeting of the Brazilian Econometric Society (SBE, 2026). Currently Lead Data Scientist at Thoughtworks, running cluster-randomized experiments and impact evaluations; previously designed field experiments on incentives and consumer behavior at Rappi. Began his career in regulation and infrastructure economics at GO Associados, including a 2013 ABAR congress paper on regulatory agency independence and service quality in sanitation.
+ }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research and Teaching}
+
+\subsection{Paper Presentation, 48th Meeting of the Brazilian Econometric Society (SBE)}
+\jobdate{Foz do Iguaçu}{December 2026}{accepted}
+Marthe, Guilherme C. Q.; Vianna, Guilherme. \textit{Residual Analysis and Active-Set Influence Diagnostics for Synthetic Controls}. Accepted for the Egg Timer session for student papers, with comments from invited researchers, at the 48th Meeting of the Sociedade Brasileira de Econometria.
+
+\vspace{1em}
+
+\subsection{Paper, Brazilian Congress of Regulation (ABAR)}
+{\large 2013 --- co-authored with Gesner Oliveira and Wagner Heibel (GO Associados)}\vspace{0.5em}\\
+Oliveira, Gesner; Heibel, Wagner; Marthe, Guilherme. \textit{Qualidade dos Serviços e Fatores da Independência das Agências Reguladoras: Uma Primeira Análise do Setor de Saneamento}. Congresso ABAR (Associação Brasileira de Agências de Regulação), 2013. A first analysis of how the independence of regulatory agencies relates to service quality in the Brazilian sanitation sector.
+
+\vspace{1em}
+
+\subsection{Graduate Teaching Assistant, Design and Analysis of Experiments, IME-USP}
+\jobdate{São Paulo}{July 2025}{December 2025}
+Teaching Assistant for the graduate course in Design and Analysis of Experiments at the Institute of Mathematics and Statistics of the University of São Paulo, supporting instruction in randomization, blocking, factorial designs and the analysis of experiments.
+
+\vspace{1em}
+
+\subsection{Data Science Bootcamp Instructor, Tera}
+\jobdate{São Paulo}{April 2019}{July 2022}
+Instructor for the Machine Learning modules of Tera's Data Science Bootcamp: developed course content, delivered lectures and mentored students.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience in Experimentation and Causal Inference}
+
+\subsection{Lead Data Scientist, Thoughtworks}
+\jobdate{São Paulo}{July 2024}{current}
+Dual role combining client delivery and people leadership: responsible for the performance evaluation, technical guidance and career development of seven data scientists. Currently allocated to a major aviation client's Measurement and Experimentation department, evaluating the causal impact of marketing interventions on customer demand.
+\subsubsection{Main Achievements}
+
+\begin{itemize}
+\item{Designed and ran cluster-randomized (geo) experiments with fixed audiences segmented by region and business group (e.g., flight routes), under real operational constraints;}
+\item{Built an incrementality measurement framework, combining randomized designs with Bayesian structural time-series counterfactuals, deployed across multiple experiments;}
+\item{Developed internal methodologies for experiment sizing (simulation-based power analysis) and for identifying new testing opportunities;}
+\item{Core developer of the internal Python measurement library and author of internal documentation on experimental design and A/B testing;}
+\item{Trains team members in causal inference, including difference-in-differences, double machine learning and causal AI, and leads a client forum where data scientists present and discuss causal inference and experimental design;}
+\item{Member of the internal Neurodivergence Support Group committee.}
+\end{itemize}
+
+\subsection{Lead Data Scientist, Rappi --- Turbo}
+\jobdate{São Paulo}{January 2022}{June 2024}
+Managed a team of three data scientists and two developers building the demand forecasting engine and the automated reordering process for dark stores and distribution centers, operating across multiple Latin American markets.
+\subsubsection{Main Achievements}
+
+\begin{itemize}
+\item{Developed an elasticity-based pricing system, estimating consumer price response to support real-time competitive price reactions;}
+\item{Designed an experimentation pipeline to evaluate alternative demand modeling techniques by SKU segment;}
+\item{Built a demand planning interface where planners could adjust forecasts for country-specific needs, SKU changes and out-of-sample events;}
+\item{Managed an ML-driven purchase-order pipeline and led the ERP migration in compliance with auditing and accounting standards.}
+\end{itemize}
+
+\subsection{Data Scientist, Rappi}
+\jobdate{São Paulo}{October 2020}{December 2021}
+Member of the experiments team, studying how couriers respond to earnings and incentive schemes. Later joined the squad that built the automated proactive incentive pricing system, which sets 75\% of courier incentives across the nine countries where Rappi operates.
+\subsubsection{Main Achievements}
+
+\begin{itemize}
+\item{Designed field experiments on payment schemes and courier behavior across Latin American operations, improving acceptance and defect rates;}
+\item{Developed individual-level response models for different incentive schemes, estimating conversion and incrementality (Rappi's A/B testing metric);}
+\item{Built and maintained the proactive incentive generation system, cutting the monthly cost per order of the incentives operation by 50\%.}
+\end{itemize}
+
+\subsection{Data Scientist, Noverde}
+\jobdate{São Paulo}{April 2018}{August 2020}
+At Noverde, a consumer-credit fintech, led the data team responsible for automated decision systems, working closely with the company's leadership. Responsible for the design, analysis and implementation of the online credit-scoring model that granted USD 10 million through 25 thousand contracts.
+\subsubsection{Main Achievements}
+
+\begin{itemize}
+\item{Through successive iterations of the credit-scoring model, reduced default rates from 42\% (March 2018) to 18\% (December 2020);}
+\item{Designed and built the behavioral scoring system for recurring customers, based on their repayment behavior, one of Noverde's main sources of revenue;}
+\item{Coordinated a custom credit-scoring model with the Serasa DataLab team, using mobile data for early detection of credit risk;}
+\item{Built low-cost prototypes for document processing (from R\$4.00 to R\$0.20 per request) and automated proof-of-life fraud prevention.}
+\end{itemize}
+
+\subsection{Data Analyst, Umoe Bioenergy}
+\jobdate{São Paulo and Presidente Prudente}{March 2017}{April 2018}
+Responsible for analytical data management across the production chain of a sugarcane bioenergy producer, reporting directly to the CFO and CEO.
+\subsubsection{Main Achievements}
+
+\begin{itemize}
+\item{Using Bayesian techniques, identified bottlenecks in mechanized harvesting, supporting high-investment decisions at the plant;}
+\item{Analyzed four years of crop yield data per field to prioritize the harvesting queue;}
+\item{Built data pipelines and automated KPI reports on equipment efficiency and personnel performance.}
+\end{itemize}
+
+\subsection{Product Analyst, enjoei.com.br}
+\jobdate{São Paulo}{March 2016}{March 2017}
+Product team member at Enjoei, a second-hand fashion marketplace, responsible for data analysis and deep dives for the product, marketing and customer service teams.
+\subsubsection{Main Achievements}
+
+\begin{itemize}
+\item{Implemented a product ranking algorithm based on real-time estimated ``saleability'', increasing homepage-to-product conversion by 50\%;}
+\item{Implemented the first statistical recommendation model (clustering and nearest neighbors) and its production data pipeline.}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%
+\section{Experience in Regulation and Infrastructure Economics}
+
+\subsection{Trainee in Research and Economic Analysis, GO Associados}
+\jobdate{São Paulo}{November 2012}{February 2014}
+Worked directly with the partners on client projects in antitrust, infrastructure, regulation, energy and sanitation: reports, financial and economic modeling, technical notes, economic studies, workshops and presentations. Monitored macroeconomic, sectoral and regulatory developments.
+\subsubsection{Main Achievements}
+
+\begin{itemize}
+\item{Took part in writing and publishing the ``Manual for the Elaboration of Performance-Based Contracts in Sanitation Companies'', prepared by GO for the International Finance Corporation (World Bank Group);}
+\item{Assisted in a competition study of the airport sector in light of the 2013 concessions of Confins and Galeão airports;}
+\item{Researched and created content for the second edition of \textit{Direito e Economia da Concorrência}, by Gesner Oliveira and João Grandino Rodas;}
+\item{Managed content and publication of the book \textit{Parcerias Público-Privadas}, by Gesner Oliveira and Luiz Chrysostomo;}
+\item{Executive Secretary of the Economic Team of Infrastructure and Environmental Solutions, helping develop and curate its meetings;}
+\item{Developed a workshop on competition best practices for trade associations.}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+\pagebreak
+\section{Additional Information}
+
+\xpatchcmd{\itemize}
+  {\def\makelabel}
+  {\setlength{\itemsep}{0em}\def\makelabel}
+  {}
+  {}
+
+\setlength\multicolsep{0pt}
+
+\begin{multicols}{2}
+\normalsize
+
+\subsection{Education}
+\begin{itemize}
+\item{IME-USP – M.Sc. in Mathematical Statistics and Probability, 2024--present}
+\item{IME-USP – Bachelor's degree in Statistics, 2016--2018 (interrupted)}
+\item{Pontifícia Universidade Católica de São Paulo, Economics, 2014}
+\item{Mount Vernon High School, Fairfax County VA, 2007/2008 (full year)}
+\end{itemize}
+
+\subsection{Technical Knowledge}
+\begin{itemize}
+\item{Experimental design: randomization, cluster and geo experiments, re-randomization, blocking, simulation-based power analysis}
+\item{Causal inference: DiD, synthetic control, IPW, matching, causal DAGs, double ML, outcome modeling, HTE}
+\item{Applied statistical modelling: OLS, LMM, GLM, ANOVA, hypothesis testing, bootstrapping, Bayesian methods}
+\item{Time series econometrics (VAR, ARCH, ARIMA, BSTS)}
+\item{ML techniques: SVM, RF, LDA, KNN, k-means, PCA, t-SNE, and others}
+\item{Programming: R and Python (fluent), SQL; basic C, Rust and Go}
+\item{Tools: Airflow, Jupyter, Docker, GCloud, git}
+\end{itemize}
+
+\subsection{Complementary Education}
+\begin{itemize}
+\item{Spatial Econometrics – Unicamp – Jun 2021}
+\item{Generalized Linear Models – IME-USP – Aug 2020}
+\item{Categorical Data Analysis with Alan Agresti – JSM – Jul 2019}
+\item{Credit Risk Analytics for Basel and IFRS 9 with Daniel Rösch and Harry Scheule – NYU – Aug 2019}
+\item{Preparation course for ANPEC – Insper, 2014 and 2015 – Macro, Micro, Statistics and Mathematics}
+\item{Economics and Econometrics of Commodity Prices – FGV EPGE – Aug 2012}
+\item{Databricks Certified Data Engineer Associate}
+\end{itemize}
+
+\subsection{References}
+\begin{itemize}
+\item{GO Associados / FGV EAESP: Prof. Gesner Oliveira, Founding Partner\\gesner@goassociados.com.br C: (11) 98685-2715}
+\item{Amazon: Marcos Takashi, Data Engineer and Data Scientist \\C: +81 90-3684-4901}
+\item{Rispar: Leonardo Bianconi, Product Strategy \\C: (11) 98372-8107}
+\end{itemize}
+
+\end{multicols}
+
+\end{document}
